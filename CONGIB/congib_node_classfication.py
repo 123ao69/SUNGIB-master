@@ -55,7 +55,7 @@ class CLUB(torch.nn.Module):
         return -self.loglikeli(x, edge_index, h)
 
 
-class MVGIB(torch.nn.Module):
+class CONGIB(torch.nn.Module):
     def __init__(self, encoder_c1, encoder_h1, encoder_c2, encoder_h2,
                  encoder_f, club):
         super().__init__()
@@ -260,7 +260,7 @@ if __name__ == '__main__':
 
     print("convert success!")
 
-    model = MVGIB(encoder_c1=GCNEncoder(args),
+    model = CONGIB(encoder_c1=GCNEncoder(args),
                   encoder_h1=GCNEncoder(args),
                   encoder_c2=EdgeGCNEncoder(num_node_in_embeddings=conj_dataset.num_features,
                                             num_edge_in_embeddings=data.num_features,
