@@ -267,7 +267,7 @@ if __name__ == '__main__':
     conj_dataset = connective_graph_generation(dataset1)
     print("convert success!")
 
-    model = MVGIB(encoder_c1=GINEncoder(in_dim=data.num_features, hidden_dim=args.hidden, num_layers=args.num_layers),
+    model = CONGIB(encoder_c1=GINEncoder(in_dim=data.num_features, hidden_dim=args.hidden, num_layers=args.num_layers),
                   encoder_h1=GINEncoder(in_dim=data.num_features, hidden_dim=args.hidden, num_layers=args.num_layers),
                   encoder_c2=EdgeGCNEncoder(num_node_in_embeddings=data.num_edge_features,
                                             num_edge_in_embeddings=data.num_features,
