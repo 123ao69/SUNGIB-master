@@ -42,7 +42,7 @@ class CLUB(torch.nn.Module):
         return -self.loglikeli(x, edge_index, batch, h)
 
 
-class MVGIB(torch.nn.Module):
+class CONGIB(torch.nn.Module):
     def __init__(self, encoder_c1, encoder_h1, encoder_c2, encoder_h2,
                  encoder_f, club):
         super().__init__()
