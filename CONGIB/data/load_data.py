@@ -37,7 +37,7 @@ def load_node_dataset(name):
 
     data.num_classes = dataset.num_classes
 
-    data = train_val_test_split(data, 5, train_ratio=0.8, val_ratio=0.0)
+    data = train_val_test_split(data, 5, train_ratio=0.6, val_ratio=0.2)
 
     return data
 
@@ -78,7 +78,7 @@ def load_real_datasets(datasets):
 
         dataset = Data(x=features, edge_index=edge_index, y=labels)
 
-        dataset = train_val_test_split(dataset, 5, train_ratio=0.8, val_ratio=0.0)
+        dataset = train_val_test_split(dataset, 5, train_ratio=0.6, val_ratio=0.2)
 
         num_classes = int(max(labels) + 1)
         dataset.num_classes = num_classes
