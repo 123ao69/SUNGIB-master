@@ -107,10 +107,10 @@ def eval_node(data, embedding, args):
             acc_val = torch.sum(preds_val == labels[val_mask]).float() / labels[val_mask].size(0)
             acc_test = torch.sum(preds_test == labels[test_mask]).float() / labels[test_mask].size(0)
 
-            # if acc_val >= acc_val_best:
-            #     acc_val_best = acc_val
-            #     if acc_test >= acc_test_best:
-            #         acc_test_best = acc_test
+            if acc_val >= acc_val_best:
+                acc_val_best = acc_val
+                if acc_test >= acc_test_best:
+                    acc_test_best = acc_test
 
             if acc_test >= acc_test_best:
                 acc_test_best = acc_test
