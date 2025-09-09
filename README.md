@@ -1,7 +1,7 @@
 # Enhancing Graph Representations via Generalized Edge-to-Vertex Transforms and Complementary Information Bottleneck
 
 <p align="center">
-  <img width="800px" src="overview.png" >
+  <img width="800px" src="overview.pdf" >
 </p>
 
 ## Introduction
